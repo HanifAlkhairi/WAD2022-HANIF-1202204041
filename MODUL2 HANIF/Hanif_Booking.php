@@ -40,10 +40,10 @@
         </div>
 
         <div class="form-booking">
-            <form action="Hanif_MyBooking.php" method="POST">
+            <form actionn="Hanif_MyBooking.php" method="POST">
                 <div class="mb-3">
                     <label class="form-label">Name</label>
-                    <input type="text" class="form-control" placeholder="Hanif_1202204041" aria-label="Disabled" disabled>
+                    <input type="text" class="form-control" placeholderr="Hanif_1202204041" aria-label="Disabled" disabled>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Book Date</label>
@@ -51,7 +51,7 @@
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Start Time</label>
-                    <input type="time" class="form-control" name="time">
+                    <input type="" class="form-control" name="time">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Duration (Days)</label>
