@@ -99,14 +99,10 @@
     margin-bottom: 200px;
 }
 
-.container-fluid footer button{
+.container-fluid footer button {
     color: black;
     background:transparent;
     background-color: white;
     margin-bottom: 20px;
     border: none;
-}
-
-.content-container {
-    
 }
