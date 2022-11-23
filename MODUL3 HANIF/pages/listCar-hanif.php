@@ -36,10 +36,34 @@
         </div>
 
         <div class="add-subtitle">
-            <h5 style="font-weight: 300; font-size: 14px">List Show Room Hanif - 1202204041</h5>
+            <h5 style="font-weight: 300; font-size: 14px; margin-bottom: 60px;">List Show Room Hanif - 1202204041</h5>
         </div>
 
+        <div class="phpset" style="display: flex;">
+
+          <?php
+            include '../config/connector.php';
+            $data = mysqli_query($connect,"SELECT * FROM showroom_hanif_table1");
+            if ($data->num_rows==0) {
+              header('location:add-hanif.php');
+            }
+
+            while($d = mysqli_fetch_array($data)){?>
+              <div class="col" id="car" style="display: flex; justify-content: center; align-items: center;">
+                  <div class="card" style="width: 18rem;">
+                      <img src="../Assets/<?php echo $d['foto_mobil'];?>" class="card-img-top" alt="<?php echo $d['foto_mobil'];?>" style="height:240px;">
+                      <div class="card-body">
+                        <h5 class="card-title"><?php echo $d['nama_mobil'];?></h5>
+                        <p class="card-text"><?php echo $d['deskripsi'];?></p>
+                        <a href="detail-hanif.php?id=<?php echo $d['id_mobil'];?>" class="btn btn-primary">Detail</a>
+                        <a href="../config/delete.php?id=<?php echo $d['id_mobil']; ?>" class="btn btn-primary" style="margin-left: 10px; background: red;">Hapus</a>
+                      </div>
+                  </div>
+              </div>
+          <?php } ?>
         
+        </div>
+
     </div>
 
 

@@ -64,12 +64,12 @@
               <label for="paidOff" class="form-label">Status Pembayaran</label>
               <div id="paidOff">
                 <div class="form-check form-check-inline">
-                  <input type="radio" class="form-check-input" name="padiOff" id="Lunas" value="Lunas">
+                  <input type="radio" class="form-check-input" name="paidOff" id="Lunas" value="Lunas">
                   <label class="form-check-label" for="lunas">Lunas</label>
                 </div>
 
                 <div class="form-check form-check-inline">
-                  <input type="radio" class="form-check-input" name="padiOff" id="Lunas" value="Lunas">
+                  <input type="radio" class="form-check-input" name="paidOff" id="belumLunas" value="Belum Lunas">
                   <label class="form-check-label" for="belumLunas">Belum Lunas</label>
                 </div>
               </div>
