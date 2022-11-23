@@ -79,7 +79,7 @@
               </div>
             </div>
 
-            <a class="mt-5 btn btn-primary col" href="edit-hanif.php" style="width:150px; margin-bottom: 10px;">Edit</a> <br>
+            <a class="mt-5 btn btn-primary col" href="edit-hanif.php?id=<?php echo $id_mobil?>" style="width:150px; margin-bottom: 10px;">Edit</a> <br>
             <a href="../config/delete.php?id=<?php echo $d['id_mobil']; ?>" class="btn btn-primary" style="width:150px; margin-bottom: 100px; background: red;">Hapus</a>
         </div>
         <?php }?>

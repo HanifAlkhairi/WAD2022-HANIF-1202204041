@@ -29,8 +29,8 @@
     <div class="add-mainContainer">
         <?php
         include '../config/connector.php';
-        #$id_mobil = $_GET['id_mobil'];
-        $data = mysqli_query($connect,"SELECT * FROM showroom_hanif_table1");
+        $id_mobil = $_GET['id'];
+        $data = mysqli_query($connect,"SELECT * FROM showroom_hanif_table1 WHERE id_mobil='$id_mobil'");
         while ($d = mysqli_fetch_array($data)){?>
         <div class="add-titleContainer">
             <h3>Detail Mobil</h3>
@@ -66,6 +66,10 @@
               <textarea class="form-control mb-3" aria-label="With textarea" name="car-desc" rows="4"><?php echo $d['deskripsi']?></textarea>
             </div>
             <div class="mb-3">
+              <label for="car-image" class="form-label">Foto</label>
+              <input type="file" class="form-control col me-5" name="car-image" accept=".jpg,.png,.jpeg">
+            </div>
+            <div class="mb-3">
               <label for="paidOff" class="form-label">Status Pembayaran</label>
               <div id="paidOff">
                 <div class="form-check form-check-inline">
@@ -80,8 +84,8 @@
               </div>
             </div>
 
-            <input type="submit" class="mt-5 btn btn-primary col" href="../config/edit.php?id=<?php echo $d['id_mobil']; ?>" value="Simpan" style="width:150px; margin-bottom: -20px;"> <br>
-            <a class="mt-5 btn btn-primary col" href="../pages/detail-hanif.php?id=<?php echo $d['id_mobil']; ?>" style="width:150px; margin-bottom: 50px;">Kembali</a>
+            <input type="text" name="id" value="<?php echo $id_mobil ?>" style="display: none;">
+            <input class="mt-5 btn btn-primary col" type="submit" value="Selesai" style="width:150px;">
         </div>
 
         </form>
