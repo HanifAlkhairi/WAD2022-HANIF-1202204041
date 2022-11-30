@@ -5,20 +5,20 @@ if (!isset($_SESSION)){
 
 require 'connector.php';
 
-$username = $_POST['email'];
+$email = $_POST['email'];
 $password = $_POST['password'];
 
-$dt_username = "SELECT * FROM user_hanif WHERE email = '$username' AND password = '$password'";
+$dt_username = "SELECT * FROM user_hanif WHERE email = '$email' AND password = '$password'";
 $executeQuery = mysqli_query($connect, $dt_username);
 
 if (mysqli_num_rows($executeQuery) == 1){
     $result = mysqli_fetch_assoc($executeQuery);
 
-    if ($result['email'] == $username && $result['password'] == $password){
-        echo "Logged in!";
+    if ($result['email'] == $email && $result['password'] == $password){
         $_SESSION['email'] = $result['email'];
         $_SESSION['name'] = $result['name'];
         $_SESSION['id'] = $result['id'];
+        $_SESSION['message'] = 'Anda Berhasil Login!';
         header("location: ../pages/logon-hanif.php?login=berhasil");
         exit();
         

@@ -1,3 +1,14 @@
+<?php
+
+$value = "Cookies WAD";
+$message = false;
+if (isset($_POST['rememberMe'])) {
+    setcookie("MyCookie", $value, time() + 3600);
+    $message = 'Cookie Berhasil Disimpan';
+}
+?>
+
+
 <!doctype html>
 <html lang="en">
     <head>

@@ -18,11 +18,12 @@
           <ul class="nav">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#" style="color:white">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="listCar-hanif.php" style="color:#E0E0E0">My Car</a>
-            </li>
+</li>
           </ul>
+
+          <div class="nav-item">
+            <a class="btn btn-light text-primary px-4 my-3" href="login-hanif.php" style="font-size:13px; font-weight:600;">Login</a>
+          </div>
         </div>
     </nav>
 
@@ -37,10 +38,6 @@
             <div class="subtitle">
                 <h5> Disini kamu akan temukan seluruh mobil milik Hanif!</h5>
             </div>
-
-            <a class="btn-hero" href="listCar-hanif.php">
-                <button type="button" class="btn btn-primary">My Car</button>
-            </a>
 
             <div class="logoead">
                 <img src="../assets/images/logo-ead.png" alt="" width="100" height="30">

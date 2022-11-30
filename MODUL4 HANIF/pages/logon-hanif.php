@@ -1,3 +1,12 @@
+<?php
+
+include '../config/connector.php';
+
+$user = mysqli_query($connect, "SELECT * FROM user_hanif");
+$user_data = mysqli_fetch_assoc($user);
+
+?>
+
 <!doctype html>
 <html lang="en">
     <head>
@@ -30,10 +39,10 @@
 
             <div class="btn-group">
                 <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" style="font-size:13px; font-weight:600;">
-                    Hanif
+                    <?= $user_data['nama'] ?>
                 </button>
                 <ul class="dropdown-menu dropdown-menu-lg-end">
-                    <li><a class="dropdown-item" href="#" style="font-size:13px; font-weight:600;">Profile</a></li>
+                    <li><a class="dropdown-item" href="../pages/profile-hanif.php" style="font-size:13px; font-weight:600;">Profile</a></li>
                     <li><a class="dropdown-item" href="../config/logout.php" style="font-size:13px; font-weight:600;">Logout</a></li>
                 </ul>
             </div>

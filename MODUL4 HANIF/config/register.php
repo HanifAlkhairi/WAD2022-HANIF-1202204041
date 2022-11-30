@@ -20,7 +20,7 @@ include 'connector.php';
 
     if (mysqli_query($connect, $s)){
         session_start();
-        $_SESSION['register'] = 'berhasil';
+        $_SESSION['message'] = 'Berhasil Terdaftar';
         header("location: ../pages/login-hanif.php");
     } else{
         header("location: ../pages/register-hanif.php");

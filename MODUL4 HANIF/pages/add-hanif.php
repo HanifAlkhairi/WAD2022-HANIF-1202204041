@@ -23,6 +23,16 @@
               <a class="nav-link" href="listCar-hanif.php" style="color:White">My Car</a>
             </li>
           </ul>
+
+          <div class="btn-group">
+                <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" style="font-size:13px; font-weight:600;">
+                    Hanif
+                </button>
+                <ul class="dropdown-menu dropdown-menu-lg-end">
+                    <li><a class="dropdown-item" href="../pages/profile-hanif.php" style="font-size:13px; font-weight:600;">Profile</a></li>
+                    <li><a class="dropdown-item" href="../config/logout.php" style="font-size:13px; font-weight:600;">Logout</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 

@@ -34,12 +34,12 @@ $user_data = mysqli_fetch_assoc($user);
             </ul>
 
             <div class="btn-group">
-                <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
-                    Hanif
+                <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" style="font-size:13px; font-weight:600;">
+                    <?= $user_data['nama'] ?>
                 </button>
                 <ul class="dropdown-menu dropdown-menu-lg-end">
-                    <li><a class="dropdown-item" href="#">Profile</a></li>
-                    <li><a class="dropdown-item" href="../config/logout.php">Logout</a></li>
+                    <li><a class="dropdown-item" href="../pages/profile-hanif.php" style="font-size:13px; font-weight:600;">Profile</a></li>
+                    <li><a class="dropdown-item" href="../config/logout.php" style="font-size:13px; font-weight:600;">Logout</a></li>
                 </ul>
             </div>
         </div>
@@ -50,10 +50,10 @@ $user_data = mysqli_fetch_assoc($user);
                     <h3>Profile</h3>
                 </div>
 
-                <form action="../config/update.php" method="POST">
+                <form action="../pages/logon-hanif.php" method="POST">
                     <div class="mb-3" style="margin-top: 50px; width: 100%;">
                         <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" name="email" value="<?= $user_data['email'] ?>" readonly>
+                        <input type="email" class="form-control" name="email" value="<?= $user_data['email'] ?>" disabled>
                     </div>
 
                     <div class="mb-3" style="width: 100%;">
@@ -76,7 +76,9 @@ $user_data = mysqli_fetch_assoc($user);
                         <input type="password" class="form-control" name="confirmPassword" placeholder="Konfirmasi Kata Sandi Kamu!" required>
                     </div>
 
-                    <input type="submit" class="mt-5 btn btn-primary col" value="Daftar" name="register" style="width:150px; margin-bottom: -40px;">
+                    <input type="text" name="id" value="<?php echo $id_user ?>" style="display: none;">
+                    <input class="mt-5 btn btn-primary col" type="submit" value="Selesai" style="width:150px;">
+
                 </form>
     </div>
     

@@ -1,3 +1,5 @@
+<?php session_start();?>
+
 <!doctype html>
 <html lang="en">
     <head>
@@ -8,6 +10,12 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
         rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     </head>
+
+    <?php if (isset($_SESSION['register']) && $_SESSION['register'] == 'gagal') {$_SESSION['register'] = ''; ?>
+        <div class="alert alert-warning m-0 p-2 alert-dismissable" role="alert">Email Anda Sudah Pernah Terdaftar!
+            <button type="button" class="btn-close p-3" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    <?php } ?>
 
     <body>
         <div class="container" style="display:flex; justify-content: center; align-items: center; gap: 250px; height: 700px;">
@@ -39,11 +47,11 @@
                     </div>
                     <div class="mb-3" style="width: 500px;">
                         <label for="password" class="form-label">Kata Sandi</label> <a style="color: red;">*</a>
-                        <input type="password" class="form-control" name="password" placeholder="********" required>
+                        <input type="password" class="form-control" name="password" placeholder="********" onkeyup='check();' required>
                     </div>
                     <div class="mb-3" style="width: 500px;">
                         <label for="confirmPassword" class="form-label">Konfirmasi Kata Sandi</label> <a style="color: red;">*</a>
-                        <input type="password" class="form-control" name="confirmPassword" placeholder="" required>
+                        <input type="password" class="form-control" name="confirmPassword" placeholder="Konfirmasi Kata Sandi Anda" onkeyup='check();' required>
                     </div>
 
                     <input type="submit" class="mt-5 btn btn-primary col" value="Daftar" name="register" style="width:150px; margin-bottom: -40px;">
