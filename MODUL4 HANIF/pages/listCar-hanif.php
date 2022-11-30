@@ -43,7 +43,7 @@
 
           <?php
             include '../config/connector.php';
-            $data = mysqli_query($connect,"SELECT * FROM showroom_hanif_table");
+            $data = mysqli_query($connect,"SELECT * FROM showrom_hanif_table");
             if ($data->num_rows==0) {
               header('location:add-hanif.php');
             }

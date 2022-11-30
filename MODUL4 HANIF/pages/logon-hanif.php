@@ -2,7 +2,7 @@
 
 include '../config/connector.php';
 
-$user = mysqli_query($connect, "SELECT * FROM user_hanif");
+$user = mysqli_query($connect, "SELECT * FROM usr_hanif");
 $user_data = mysqli_fetch_assoc($user);
 
 ?>
