@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $file_tmp = $_FILES['car-image']['tmp_name'];
     move_uploaded_file($file_tmp, '../assets/'.$car_image);
     
-    $s = mysqli_query($connect, "INSERT INTO showroom_hanif_table1 VALUES(0,'$car_name','$car_owner','$car_brand','$own_date','$car_desc','$car_image','$paidoff')");
+    $s = mysqli_query($connect, "INSERT INTO showroom_hanif_table VALUES(0,'$car_name','$car_owner','$car_brand','$own_date','$car_desc','$car_image','$paidoff')");
 
     if ($s) {
         header("Location:../pages/listCar-hanif.php?add=berhasil");

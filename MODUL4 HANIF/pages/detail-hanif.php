@@ -30,7 +30,7 @@
         <?php
         include '../config/connector.php';
         $id_mobil = $_GET['id'];
-        $data = mysqli_query($connect,"SELECT * FROM showroom_hanif_table1");
+        $data = mysqli_query($connect,"SELECT * FROM showroom_hanif_table");
         while ($d = mysqli_fetch_array($data)){?>
         <div class="add-titleContainer">
             <h3>Detail Mobil</h3>

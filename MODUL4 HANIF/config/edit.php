@@ -20,11 +20,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $file_tmp = $_FILES['car-image']['tmp_name'];
         move_uploaded_file($file_tmp, '../assets/'.$car_image);
         
-        $s = mysqli_query($connect, "UPDATE showroom_hanif_table1 SET nama_mobil = '$car_name', pemilik_mobil = '$car_owner', merk_mobil = '$car_brand', deskripsi = '$car_desc', status_pembayaran = '$paidoff', foto_mobil = '$car_image' WHERE id_mobil = '$car_id'");
+        $s = mysqli_query($connect, "UPDATE showroom_hanif_table SET nama_mobil = '$car_name', pemilik_mobil = '$car_owner', merk_mobil = '$car_brand', deskripsi = '$car_desc', status_pembayaran = '$paidoff', foto_mobil = '$car_image' WHERE id_mobil = '$car_id'");
     }
 
     else {
-        $s = mysqli_query($connect, "UPDATE showroom_hanif_table1 SET nama_mobil = '$car_name', pemilik_mobil = '$car_owner', merk_mobil = '$car_brand', deskripsi = '$car_desc', status_pembayaran = '$paidoff' WHERE id_mobil = '$car_id'");    
+        $s = mysqli_query($connect, "UPDATE showroom_hanif_table SET nama_mobil = '$car_name', pemilik_mobil = '$car_owner', merk_mobil = '$car_brand', deskripsi = '$car_desc', status_pembayaran = '$paidoff' WHERE id_mobil = '$car_id'");    
     }
     
 

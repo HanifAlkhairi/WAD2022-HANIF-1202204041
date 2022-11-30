@@ -30,7 +30,7 @@
         <?php
         include '../config/connector.php';
         $id_mobil = $_GET['id'];
-        $data = mysqli_query($connect,"SELECT * FROM showroom_hanif_table1 WHERE id_mobil='$id_mobil'");
+        $data = mysqli_query($connect,"SELECT * FROM showroom_hanif_table WHERE id_mobil='$id_mobil'");
         while ($d = mysqli_fetch_array($data)){?>
         <div class="add-titleContainer">
             <h3>Detail Mobil</h3>
